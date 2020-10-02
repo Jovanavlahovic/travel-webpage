@@ -1,122 +1,181 @@
-@import 'mixins';
-@import 'vars';
+@import "mixins";
+@import "vars";
 
 @include main;
 
-section{
-    padding: 2em 7em;
-    text-align: center;
+section {
+  padding: 2em 7em;
+  text-align: center;
+  @include clearfix;
 }
 
-h2{
-    color: $color-titles;
-    background-color: $color-font;
-    width: 30%;
-    margin: 0 auto;
+h2 {
+  color: $color-titles;
+  background-color: $color-font;
+  width: 30%;
+  margin: 0 auto;
 }
 
-nav{
+nav {
+  background-color: $color-red;
+  width: 100%;
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      padding: 0.5em 1.5em;
+      &:hover {
+        background-color: #fff;
+        a {
+          color: $color-red;
+        }
+      }
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+main {
+  padding: 0 2em;
+  background-image: url("../slike/main_background.jpg");
+  background-size: 100% 100%;
+  height: 100vh;
+  position: relative;
+
+  #logo {
     background-color: $color-red;
-    width: 100%;
-    ul{
-        list-style-type: none;
-        li{
-            display: inline-block;
-            padding: 0.5em 1.5em;
-            &:hover{
-                background-color: #fff;
-                a{color:$color-red}
-            }
-        }
-        a{
-            color: #fff;
-            text-decoration: none;
-            cursor: pointer;
-        }
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 0;
+    right: 2em;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Staatliches";
+  font-weight: normal;
+}
+
+h1 {
+  color: $color-titles;
+  text-transform: uppercase;
+  font-size: 4em;
+}
+
+h3 {
+  color: #fff;
+}
+
+.intro-text {
+  margin-top: 27%;
+}
+
+.container {
+  margin: 2em auto;
+  @include clearfix;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.key-box {
+  background-image: url("../slike/key.png");
+  background-size: 100% 100%;
+  background-color: $color-red;
+  flex-basis: 13.5%;
+  height: 100px;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+
+  p {
+    display: none;
+  }
+
+  &:hover {
+    background-image: none;
+    flex-basis: 27%;
+    border-left: 4em solid #000;
+    cursor: pointer;
+
+    p {
+      display: block;
+      font-size: 4.5em;
+      color: #fff;
     }
+  }
 }
 
-main{
-   padding: 0 2em; 
-   background-image: url('../slike/main_background.jpg');
-   background-size: 100% 100%;
-   height: 100vh;
-    position: relative;
+#testimonials {
+  background-color: $color-gray;
 
-    #logo{
-        background-color: $color-red;
-        height: 60px;
-        width: 60px;
-        position: absolute;
-        top: 0;
-        right: 2em;
-    }
+  p {
+    margin: 2.5em 0;
+    text-align: justify;
+    column-count: 3;
+  }
 }
 
-h1,h2,h3{
-    font-family: 'Staatliches';
-    font-weight: normal;
+#contact, .map{
+    margin-top: 2em;
 }
 
-
-h1{
-    color: $color-titles;
-    text-transform: uppercase;
-    font-size: 4em;
+#contact {
+  float: left;
+  width: 49%;
+  text-align: left;
 }
 
-h3{
+form {
+    padding: 1em;
+    background-color: $color-gray;
+    border-radius: 3px;
+    width: 80%;
+
+  input,
+  textarea,
+  select, #submit {
+    padding: 0.3em;
+    border-radius: 3px;
+    border: none;
+  }
+  select {
+    width: 13%;
+  }
+  #name {
+    width: 41%;
+  }
+  #email, textarea, #submit {
+    margin-top: 1em;
+    width: 96%;
+  }
+
+  #submit{background-color: $color-red;
     color: #fff;
 }
-
-
-
-.intro-text{
-    margin-top: 27%;
 }
 
-.container{
-    margin: 2em auto;
-    @include clearfix;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.map{
+    float: right;
+    width: 50%;
+    text-align: right;
+
+    iframe{
+        width: 70%;
+    }
 }
 
-.key-box{
-    background-image: url('../slike/key.png');
-    background-size: 100% 100%;
+footer{
     background-color: $color-red;
-    flex-basis: 13.5%;
-    height: 100px;
-    margin-left: 0.5em;
-    margin-top: .5em;
-
-    p{
-        display: none;
-    }
-
-    &:hover{
-        background-image: none;
-        flex-basis: 27%;
-        border-left: 4em solid #000;
-        cursor: pointer;
-
-        p{
-            display: block;
-            font-size: 4.5em;
-            color: #fff;
-        }
-    }
+    color: #fff;
+    padding: 1em;
+    text-align: center;
 }
 
-#testimonials{
-    background-color: $color-gray;
-
-    p{
-        margin: 2.5em 0;
-        text-align: justify;
-        column-count: 3;
-    }
-}
