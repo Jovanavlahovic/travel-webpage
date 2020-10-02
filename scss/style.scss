@@ -2,3 +2,71 @@
 @import 'vars';
 
 @include main;
+
+section{
+    padding: 2em 7em;
+    text-align: center;
+}
+
+h2{
+    color: $color-titles;
+    background-color: $color-font;
+}
+
+nav{
+    background-color: $color-red;
+    width: 100%;
+    ul{
+        list-style-type: none;
+        li{
+            display: inline-block;
+            padding: 0.5em 1.5em;
+            &:hover{
+                background-color: #fff;
+                a{color:$color-red}
+            }
+        }
+        a{
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
+
+main{
+   padding: 0 2em; 
+   background-image: url('../slike/main_background.jpg');
+   background-size: 100% 100%;
+   height: 100vh;
+    position: relative;
+
+    #logo{
+        background-color: $color-red;
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        top: 0;
+        right: 2em;
+    }
+}
+
+h1,h2,h3{
+    font-family: 'Staatliches';
+    font-weight: normal;
+}
+
+
+h1{
+    color: $color-titles;
+    text-transform: uppercase;
+    font-size: 4em;
+}
+
+h3{
+    color: #fff;
+}
+
+.intro-text{
+    margin-top: 27%;
+}
