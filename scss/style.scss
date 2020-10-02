@@ -13,6 +13,7 @@ h2 {
   color: $color-titles;
   background-color: $color-font;
   width: 30%;
+  padding: 0.5em;
   margin: 0 auto;
 }
 
@@ -74,7 +75,9 @@ h3 {
 }
 
 .intro-text {
-  margin-top: 27%;
+  position: absolute;
+  left: 2em;
+  bottom: 15%;
 }
 
 .container {
@@ -123,8 +126,9 @@ h3 {
   }
 }
 
-#contact, .map{
-    margin-top: 2em;
+#contact,
+.map {
+  margin-top: 2em;
 }
 
 #contact {
@@ -134,14 +138,15 @@ h3 {
 }
 
 form {
-    padding: 1em;
-    background-color: $color-gray;
-    border-radius: 3px;
-    width: 80%;
+  padding: 1em;
+  background-color: $color-gray;
+  border-radius: 3px;
+  width: 80%;
 
   input,
   textarea,
-  select, #submit {
+  select,
+  #submit {
     padding: 0.3em;
     border-radius: 3px;
     border: none;
@@ -152,30 +157,80 @@ form {
   #name {
     width: 41%;
   }
-  #email, textarea, #submit {
+  #email,
+  textarea,
+  #submit {
     margin-top: 1em;
     width: 96%;
   }
 
-  #submit{background-color: $color-red;
-    color: #fff;
-}
-}
-
-.map{
-    float: right;
-    width: 50%;
-    text-align: right;
-
-    iframe{
-        width: 70%;
-    }
-}
-
-footer{
+  #submit {
     background-color: $color-red;
     color: #fff;
-    padding: 1em;
-    text-align: center;
+  }
 }
 
+.map {
+  float: right;
+  width: 50%;
+  text-align: right;
+
+  iframe {
+    width: 70%;
+  }
+}
+
+footer {
+  background-color: $color-red;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+.btn {
+  padding: 1em;
+  color: #fff;
+  background-color: $color-red;
+  text-decoration: none;
+  display: none;
+  width: 20%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 890px) {
+    h2{
+        width: 40%;
+    }
+  main {
+    padding: 0;
+
+    #logo {
+      right: 0;
+    }
+  }
+
+  .intro-text {
+    text-align: center;
+    top: 60%;
+    width: 100%;
+  }
+
+  #testimonials {
+      p{
+          display: none;
+      }
+      .btn{
+          margin-top: 3em;
+        display: block;
+      }
+  }
+
+  #contact, .map{
+      width: 100%;
+      text-align: center;
+  }
+
+  form{
+      width: 100%;
+  }
+}
