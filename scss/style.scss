@@ -198,11 +198,16 @@ footer {
 }
 
 @media only screen and (max-width: 890px) {
-    h2{
-        width: 40%;
-    }
+  h2 {
+    width: 40%;
+  }
+
+  section {
+    padding: 2em;
+  }
   main {
     padding: 0;
+    height: 70vh;
 
     #logo {
       right: 0;
@@ -212,25 +217,99 @@ footer {
   .intro-text {
     text-align: center;
     top: 60%;
+    left: 0;
     width: 100%;
   }
 
   #testimonials {
-      p{
-          display: none;
-      }
-      .btn{
-          margin-top: 3em;
-        display: block;
-      }
+    p {
+      display: none;
+    }
+    .btn {
+      margin-top: 3em;
+      display: block;
+    }
   }
 
-  #contact, .map{
-      width: 100%;
-      text-align: center;
+  #contact,
+  .map {
+    width: 100%;
+    text-align: center;
   }
 
-  form{
+  form {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  section {
+    padding: 2em 0.5em;
+  }
+  main {
+    height: 50vh;
+    #logo {
+      display: none;
+    }
+  }
+
+  nav ul {
+    width: 100%;
+    text-align: center;
+    li {
+      width: 19%;
+      margin: 0;
+    }
+  }
+
+  form {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+
+  #options {
+    .key-box {
+      display: none;
+    }
+  }
+
+  .btn {
+    display: block;
+    margin-top: 0;
+    padding: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  nav {
+    ul li {
       width: 100%;
+    }
+  }
+  main {
+    background-image: none;
+    background-color: #000;
+    height: fit-content;
+  }
+  .intro-text {
+    padding: 2em;
+    position: relative;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    width: 60%;
+  }
+
+  .btn {
+    width: 40%;
   }
 }
