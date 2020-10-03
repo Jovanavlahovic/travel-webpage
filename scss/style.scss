@@ -93,7 +93,7 @@ h3 {
   background-image: url("../slike/key.png");
   background-size: 100% 100%;
   background-color: $color-red;
-  flex-basis: 13.5%;
+  flex-basis: 12%;
   height: 100px;
   margin-left: 0.5em;
   margin-top: 0.5em;
@@ -104,7 +104,7 @@ h3 {
 
   &:hover {
     background-image: none;
-    flex-basis: 27%;
+    flex-basis: 18%;
     border-left: 4em solid #000;
     cursor: pointer;
 
